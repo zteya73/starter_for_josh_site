@@ -1,3 +1,15 @@
+/* Import Google Fonts for Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+/*   
+Theme Name: Josh's WordPress Site
+Theme URI: http://joshwhitkin.com
+Description: Josh’s WordPress theme.
+Author: Me
+Author URI: http://joshwhitkin.com
+Version: 1
+*/
+
 /* Background for Header */
 .bg1 {
   background: url("images/image1.jpg");
