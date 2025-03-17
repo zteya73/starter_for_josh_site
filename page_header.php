@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="<?php bloginfo('description'); ?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
-    <title><?php wp_title(); ?></title>
-    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
-    <?php wp_head(); ?> <!-- This allows WordPress to insert necessary styles and scripts -->
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="<?php bloginfo('description'); ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+  <title><?php wp_title(); ?></title>
+  <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
+
+  <?php wp_head(); ?> <!-- This allows WordPress to insert necessary styles and scripts -->
 </head>
-
-
 <body>
 
-  <header class="container-fluid bg1">
+  <header class="container-fluid smallpage-bg">
     <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand" href="#">
         <span class="josh">JOSH</span><span class="orange">WHITKIN</span>
@@ -33,7 +32,7 @@
       </div>
     </nav>
 
-    <div class="container tag">
-      <h1>Games Design For the Future</h1>
+    <div class="smallpage-tag">
+      <h1 class="smallpage-title">Projects</h1>
     </div>
   </header>
