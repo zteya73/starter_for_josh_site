@@ -24,28 +24,29 @@
 
   <section class="container-fluid aboutbg whitebg text-center">
       <div class="container">
-        <h3>LATEST ARTICLES</h3>
+      <h3 class="text-center"><?php the_field('titleforarticles'); ?></h3>
         <div class="row">
+
           <div class="col-md-4">
-            <img src="http://170.187.231.66/~mesh20/sub2/wp-content/themes/starter_for_josh_site/images/image2.jpg" alt="Image description">
-            <h4 class="article-title">A PORTRAIT</h4>
-            <p class="date">12 December 2020</p>
-            <p>STS has never been shy of seeking new terrains of investigation...</p>
-            <a href="#" class="readmore">CONTINUE READING</a>
+            <img src="<?php the_field('articleimage'); ?>" alt="Image description">
+            <h4 class="article-title"><?php the_field('articletitle'); ?></h4>
+            <p class="date" ><?php the_field('articledate'); ?></p>
+            <p class="article-p"><?php the_field('articleexcerpt'); ?> </p>
+            <a href="<?php the_field('readmore'); ?>" class="readmore">CONTINUE READING</a>
           </div>
           <div class="col-md-4">
-            <img src="http://170.187.231.66/~mesh20/sub2/wp-content/themes/starter_for_josh_site/images/image3.jpg" alt="Image description">
-            <h4 class="article-title">A MODEL</h4>
-            <p class="date">12 December 2020</p>
-            <p>STS has never been shy of seeking new terrains of investigation...</p>
-            <a href="#" class="readmore">CONTINUE READING</a>
+          <img src="<?php the_field('articleimagetwo'); ?>" alt="Image description">
+            <h4 class="article-title"><?php the_field('articletitletwo'); ?></h4>
+            <p class="date" ><?php the_field('articledatetwo'); ?></p>
+            <p class="article-p"><?php the_field('articleexcerpttwo'); ?> </p>
+            <a href="<?php the_field('readmoretwo'); ?>" class="readmore">CONTINUE READING</a>
           </div>
           <div class="col-md-4">
-            <img src="http://170.187.231.66/~mesh20/sub2/wp-content/themes/starter_for_josh_site/images/image4.jpg" alt="Image description">
-            <h4 class="article-title">A GAMES DESIGN</h4>
-            <p class="date">12 December 2020</p>
-            <p>STS has never been shy of seeking new terrains of investigation...</p>
-            <a href="#" class="readmore">CONTINUE READING</a>
+          <img src="<?php the_field('articleimagethree'); ?>" alt="Image description">
+            <h4 class="article-title"><?php the_field('articletitlethree'); ?></h4>
+            <p class="date" ><?php the_field('articledatethree'); ?></p>
+            <p class="article-p"><?php the_field('articleexcerptthree'); ?> </p>
+            <a href="<?php the_field('readmorethree'); ?>" class="readmore">CONTINUE READING</a>
           </div>
         </div>
       </div>
