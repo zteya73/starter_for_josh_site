@@ -43,6 +43,6 @@ wp_nav_menu( array(
     </nav>
 
     <div class="container tag">
-      <h1>Games Design For the Future</h1>
+    <h1><?php the_field('maintagline'); ?></h1>
     </div>
   </header>
