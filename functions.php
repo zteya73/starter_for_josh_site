@@ -12,8 +12,12 @@ function load_my_scripts() {
     // Enqueue Bootstrap JS (with jQuery dependency)
     wp_enqueue_script('bootstrap_js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js', array('jquery'), null, true);
     
+    
+    
     // Enqueue your custom style.css from the theme folder
     wp_enqueue_style('style-css', get_template_directory_uri() . '/style.css');
+
+    
 }
 
 // Hook the function into WordPress' wp_enqueue_scripts action
@@ -39,4 +43,32 @@ function add_excerpts_to_pages() {
     add_post_type_support('page', 'excerpt');
 }
 add_action('init', 'add_excerpts_to_pages');
+?>
+<?php
+function footer_left() {
+
+  register_sidebar( array(
+    'name'          => 'footer-left',
+    'id'            => 'footer-l',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+  
+  ) );
+
+}
+add_action( 'widgets_init', 'footer_left' );
+?>
+<?php
+function footer_right() {
+
+  register_sidebar( array(
+    'name'          => 'footer-right',
+    'id'            => 'footer-r',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+  
+  ) );
+
+}
+add_action( 'widgets_init', 'footer_right' );
 ?>
