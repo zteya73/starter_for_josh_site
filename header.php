@@ -1,27 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="<?php bloginfo('description'); ?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
-    <title><?php wp_title(); ?></title>
-    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
-    <?php wp_head(); ?> <!-- This allows WordPress to insert necessary styles and scripts -->
+  <meta charset="<?php bloginfo('charset'); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+<title> <?php
+  if (function_exists('is_tag') && is_tag()) {
+     single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
+  elseif (is_archive()) {
+     wp_title(''); echo ' Archive - '; }
+  elseif (is_search()) {
+     echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
+  elseif (!(is_404()) && (is_single()) || (is_page())) {
+     wp_title(''); echo ' - '; }
+  elseif (is_404()) {
+     echo 'Not Found - '; }
+  if (is_home()) {
+     bloginfo('name'); echo ' - '; bloginfo('description'); }
+  else {
+      bloginfo('name'); }
+  if ($paged>1) {
+     echo ' - page '. $paged; }
+?>
+</title>
+
+<meta name="description" content="<?php
+    if (is_single() || is_page()) {
+        $excerpt = get_the_excerpt();
+        
+        // Fallback to content if excerpt is empty
+        if (empty($excerpt)) {
+            $excerpt = wp_trim_words(get_the_content(), 25);
+        }
+        
+        // Final fallback to site description if both excerpt and content are empty
+        if (empty($excerpt)) {
+            $excerpt = get_bloginfo('description');
+        }
+        
+        // Limit the description to 160 characters
+        $meta_description = mb_substr(wp_strip_all_tags($excerpt), 0, 160);
+        
+        echo esc_attr($meta_description);
+    } else {
+        echo esc_attr(get_bloginfo('description'));
+    }
+?>">
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
+
+
 </head>
-
-
 <body>
 
-  <header class="container-fluid bg1">
-    <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand" href="#">
-        <span class="josh">JOSH</span><span class="orange">WHITKIN</span>
-      </a>
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+<header class="container-fluid" style="background-size: cover; background-image: url(<?php the_field('headerbackgroundimage') ?>);">    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <span class="josh">JOSH</span>
+          <span class="orange">WHITKIN</span>
+        </a>
+          
+<!-- Toggler/collapsibe Button -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
         <span class="navbar-toggler-icon"></span>
     </button>
       
@@ -40,9 +95,16 @@ wp_nav_menu( array(
 
 ?>
 
-    </nav>
+      </nav>
 
-    <div class="container tag">
-    <h1><?php the_field('maintagline'); ?></h1>
+      <div class="tag">
+      <h1><?php the_field('maintagline'); ?></h1>
     </div>
-  </header>
+
+
+    </div> <!-- container -->
+
+    <!-- very important that this code is added-->
+<?php wp_head(); ?> 
+
+</header>

@@ -1,8 +1,9 @@
 <?php
-/*
-Template Name: CV
-*/
-?>
+    /*
+    Template Name: CV
+    */
+    ?>
+
 <?php get_header(); /* Tells WordPress to include header.php */ ?>
 <div class="container-fluid maincontainer">
     <div class="container">
