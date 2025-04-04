@@ -1,15 +1,16 @@
 <?php
-/*
-Template Name: Projects
-*/
-?>
+    /*
+    Template Name: Projects
+    */
+    ?>
 
 <?php require_once('page_header.php'); ?>
 
 <div class="container-fluid maincontainer">
     <div class="container">
         <div class="row">
-            <section class="maintext">
+            <section class="maintext"> 
+                
             <?php 
 $args = array(
   'category_name' =>  'Projects',
@@ -44,10 +45,13 @@ $the_query = new WP_Query( $args ); ?>
 <?php else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
+ 
 
-            </section>
-        </div><!-- row -->
-    </div><!-- container -->
-</div><!-- container-fluid -->
 
-<?php get_footer(); ?> <!-- This loads footer.php content -->
+
+</section>
+           
+     </div>
+    </div>
+  </div>
+<?php get_footer(); ?>

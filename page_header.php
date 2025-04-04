@@ -61,13 +61,14 @@
         echo esc_attr(get_bloginfo('description'));
     }
 ?>">
+
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
 
 
 </head>
 <body>
 
-  <header class="container-fluid smallpage-bg">
+<header class="container-fluid" style="background-size:cover; height:40vh; background-image: url(<?php the_field('projectheaderbackgroundimage') ?>);">
     <div class="container">
       <nav class="navbar navbar-expand-md navbar-dark">
         <!-- Brand -->
@@ -102,7 +103,7 @@
       </nav>
 
       <div class="smallpage-tag">
-      <h1 class="smallpage-title"> Projects </h1><!--  the main tag line-->
+      <h1 class="smallpage-title"><?php the_field('projectsheadertitle'); ?></h1><!--  the main tag line-->
     </div>
 
 
