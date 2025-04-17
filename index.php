@@ -25,7 +25,7 @@
           <h4 class="article-title">A PORTRAIT</h4>
           <p class="date">Friday November 2030</p>
           <p class="article-p">SSTS has never been shy of seeking new terrains of  investigation. More and  more  STS s cholars are  starting to explore and intervene in the arts.  This object of study  brings  new challenges and  opportunities that we want  to explore in this session.   We would  like to gather first of all simply  new kinds of  knowledge arising from  STS study  of the arts.</p>
-          <a class="readmore"  href="#">CONTINUE READING</a>
+          <a class="readmore"  href="http://170.187.231.66/~mesh20/sub2/?page_id=324">CONTINUE READING</a>
         </div>
   
         <div class="col-md-4">
@@ -33,7 +33,7 @@
           <h4 class="article-title">A PORTRAIT</h4>
           <p class="date">Friday November 2030</p>
           <p class="article-p">SSTS has never been shy of seeking new terrains of  investigation. More and  more  STS s cholars are  starting to explore and intervene in the arts.  This object of study  brings  new challenges and  opportunities that we want  to explore in this session.   We would  like to gather first of all simply  new kinds of  knowledge arising from  STS study  of the arts.</p>
-          <a class="readmore"  href="#">CONTINUE READING</a>
+          <a class="readmore"  href="http://170.187.231.66/~mesh20/sub2/?page_id=324">CONTINUE READING</a>
         </div>
   
         <div class="col-md-4">
@@ -41,7 +41,7 @@
           <h4 class="article-title">A PORTRAIT</h4>
           <p class="date">Friday November 2030</p>
           <p class="article-p">SSTS has never been shy of seeking new terrains of  investigation. More and  more  STS s cholars are  starting to explore and intervene in the arts.  This object of study  brings  new challenges and  opportunities that we want  to explore in this session.   We would  like to gather first of all simply  new kinds of  knowledge arising from  STS study  of the arts.</p>
-          <a class="readmore"  href="#">CONTINUE READING</a>
+          <a class="readmore"  href="http://170.187.231.66/~mesh20/sub2/?page_id=324">CONTINUE READING</a>
         </div>
 
 
